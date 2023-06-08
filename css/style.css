@@ -21,7 +21,14 @@ li {
   list-style: none;
 }
 .link-header :focus {
-  color: #2196f3;
+  color: var(--color-primary);
+}
+.header-view {
+  border-bottom: 1px solid #ececec;
+  box-shadow: 0px 4px 4px 0px #00000040;
+  align-items: stretch;
+  padding-left: 9%;
+  padding-right: 18%;
 }
 .main-navigation {
   display: flex;
@@ -38,6 +45,7 @@ li {
   align-items: baseline;
   justify-content: flex-start;
   gap: 50px;
+  text-decoration: none;
 }
 .menu-link {
   color: var(--main-font-color);
@@ -53,15 +61,24 @@ li {
   display: flex;
   align-items: center;
   gap: 50px;
+  text-decoration: none;
 }
 .menu-contact-view {
   font-weight: 500;
   font-size: 14px;
   line-height: 1.14;
   color: var(--second-font-color);
+  text-decoration: none;
+}
+.evenlope-smartphon {
+  fill: #757575;
+}
+.evenlope-smartphon:hover {
+  color: var(--color-primary);
 }
 .menu-contact-view:hover {
   color: var(--color-primary);
+  text-decoration: none;
 }
 .logo {
   font-family: "Raleway";
@@ -69,6 +86,8 @@ li {
   font-size: 26px;
   line-height: 1;
   letter-spacing: 0.03em;
+  text-decoration: none;
+  color: var(--main-font-color);
 }
 span {
   font-family: "Raleway";
@@ -76,20 +95,20 @@ span {
   font-size: 26px;
   line-height: 1;
   letter-spacing: 0.03em;
-  color: #2196f3;
+  color: var(--color-primary);
 }
 .buttons:hover {
-  color: #ffffff;
+  color: var(--color-secondary);
   cursor: pointer;
-  background-color: #2196f3;
+  background-color: var(--color-primary);
 }
 .button-index {
   cursor: pointer;
   font-weight: 700;
   font-size: 16px;
   line-height: 1.88;
-  color: #ffffff;
-  background: #2196f3;
+  color: var(--color-secondary);
+  background: var(--color-primary);
   max-width: 200px;
   text-align: center;
   padding: 10px 42px 10px 42px;
@@ -107,7 +126,7 @@ span {
   letter-spacing: 0.06em;
   width: 696px;
   text-align: center;
-  color: #ffffff;
+  color: var(--color-secondary);
   margin: 0;
 }
 .background-title {
@@ -115,25 +134,43 @@ span {
   padding: 200px 452px 200px 452px;
   text-align: center;
 }
-.article-box {
+.symbol-strenghts-list {
+  list-style: none;
+  margin-bottom: 30px;
+  max-width: 1170px;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+}
+.symbol-strenghts-item {
+  width: 270px;
+  height: 120px;
+  border: 1px solid #f5f4fa;
+  border-radius: 4px;
+  padding-left: 100px;
+  padding-top: 25px;
+  background: var(--background-color-medium);
+}
+.strenghts-box {
   padding-top: 94px;
   padding-bottom: 94px;
 }
-.article {
+.strenghts {
   display: flex;
   gap: 30px;
   margin: 0;
   height: 101px;
   width: 1170px;
 }
-.article-title {
+.strenghts-title {
   font-weight: 700;
   font-size: 14px;
   line-height: 1.14;
   margin: 0 0 10px 0;
   color: var(--main-font-color);
 }
-.article-text {
+.strenghts-text {
   font-weight: 400;
   font-size: 14px;
   line-height: 1.71;
@@ -200,11 +237,74 @@ span {
   margin: 0;
   background-color: var(--color-secondary);
 }
-.list-team-card :first-child {
-  margin-left: 0px;
+.team-card-sm-list {
+  list-style: none;
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-bottom: 30px;
+  padding-left: 32px;
+  padding-right: 32px;
+  display: flex;
+  justify-content: space-evenly;
 }
-.list-team-card :last-child {
-  margin-right: 0px;
+.team-card-sm-item {
+  width: 44px;
+  height: 44px;
+  border: 1px solid transparent;
+  border-radius: 50%;
+  background-color: transparent;
+  cursor: pointer;
+  padding: 11px 11px 11px 11px;
+}
+.team-card-sm-item:hover .team-card-sm-item:focus .team-card-sm {
+  fill: var(--color-secondary);
+  text-align: center;
+}
+.team-card-sm {
+  fill: #afb1b8;
+}
+.team-card-sm-item:hover,
+.team-card-sm-item:focus {
+  border: 1px solid var(--color-primary);
+  background-color: var(--color-primary);
+  fill: var(--color-secondary);
+}
+.section-customers-title {
+  font-size: 36px;
+  letter-spacing: 0.03em;
+  text-align: center;
+  line-height: 1.2;
+  margin-top: 0;
+  margin-bottom: 50;
+}
+.logo-customer-list {
+  list-style: none;
+  margin-top: 0;
+  margin-bottom: 0;
+  padding: 0;
+  display: flex;
+  gap: 36px;
+}
+.logo-customer-item {
+  width: 170px;
+  height: 92px;
+  border: 1px solid #afb1b8;
+  border-radius: 4px;
+  cursor: pointer;
+  padding-left: 32px;
+  padding-top: 17.71px;
+  justify-content: center;
+}
+.logo-customer {
+  fill: #afb1b8;
+}
+.logo-customer-item:hover .logo-customer,
+.logo-customer-item:focus .logo-customer {
+  fill: var(--color-primary);
+}
+.logo-customer-item:hover,
+.logo-customer-item:focus {
+  border: 1px solid var(--color-primary);
 }
 .background-footer {
   background: var(--background-color-dark);
@@ -222,7 +322,7 @@ span {
   text-decoration: none;
 }
 .studio-footer {
-  color: #ffffff;
+  color: var(--color-secondary);
 }
 .address-contact-footer {
   font-weight: 400;
@@ -232,20 +332,61 @@ span {
   padding-left: 15px;
 }
 .address-footer {
-  color: #ffffff;
+  color: var(--color-secondary);
 }
 .contact-footer {
   color: rgba(255, 255, 255, 0.6);
+  text-decoration: none;
 }
 .contact-footer:hover,
 .contact-footer:focus {
-  color: #2196f3;
+  color: var(--color-primary);
 }
 .footer-portfolio-mail {
   margin: 9px 0;
 }
 .footer-portfolio-tel {
   margin: 0;
+}
+.footer-sm-block {
+  display: inline-block;
+  width: 206px;
+  height: 80px;
+}
+.join-us {
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 16px;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: var(--color-secondary);
+}
+.footer-sm-list {
+  list-style: none;
+  margin-top: 0;
+  margin-bottom: 0;
+  padding: 0;
+  display: flex;
+  gap: 10px;
+}
+.footer-sm-item {
+  width: 44px;
+  height: 44px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.1);
+  cursor: pointer;
+  padding-left: 11px;
+  padding-top: 11px;
+}
+.footer-sm-item:hover,
+.footer-sm-item:focus {
+  border: 1px solid var(--color-primary);
+  background-color: var(--color-primary);
+  fill: var(--color-secondary);
+}
+.icon-bottom {
+  fill: var(--color-secondary);
 }
 .portfolio-buttons {
   display: flex;
